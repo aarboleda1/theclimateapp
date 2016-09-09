@@ -23,7 +23,15 @@ if(typeof argv.l === 'string'  && argv.l.length > 0){
 	
 } else {
 	
+
 	console.log('no location given');
+	location(function (location) {
+		if (location){
+			console.log(location)
+		} else {
+			console.log('we are unable to provide information about your location')
+		}
+	}) 
 
 }
 
